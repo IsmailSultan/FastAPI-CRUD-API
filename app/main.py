@@ -6,12 +6,6 @@ from fastapi import HTTPException
 
 app = FastAPI()
 
-def createUser(name, age):
-        return {
-              "name": name,
-              "age": age
-        }
-
 # creates user 
 @app.post("/users")
 async def create_user(user : User):
